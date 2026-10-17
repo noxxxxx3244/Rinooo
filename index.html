@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -396,4 +395,795 @@
         </p>
 
         <p>
-          You are the very first thought that brings a gentle s
+          You are the very first thought that brings a gentle smile to my lips in the morning, and the final comforting thought that lulls me to sleep. Whenever the outside world feels exhausting, stressful, or noisy, just hearing your voice or seeing your name on my phone resets my entire soul. You are my safe place, Ritija. There is nobody on this planet who could ever compare to your gentle grace, your adorable quirks, your warm compassion, and that beautiful mind of yours.
+        </p>
+
+        <!-- Hidden Accordion: Deep Love Paragraphs -->
+        <div id="expanded-letter" class="hidden space-y-6 pt-2 border-t border-pink-100/70 transition-all duration-500">
+          <p>
+            I want you to know how fiercely proud I am of you. I see how hard you try, how genuinely you care for the people in your life, and how softly you love. Even when you are feeling tired, anxious, or questioning yourself, I want to be the mirror that shows you just how dazzling, capable, and irreplaceable you truly are. You are never alone in anything you face; my hand is forever in yours.
+          </p>
+
+          <p>
+            Celebrating over a whole year and 10+ days since October 7th has shown me that my love for you doesn’t just stay constant—it deepens with every single sunrise. I love your pout, I love the way your eyes twinkle when you get excited, I love the silly jokes we share, and I even love every single little mood swing because all of it belongs to the girl of my dreams.
+          </p>
+
+          <p>
+            One year down, my love, and an eternity left to go. Thank you for choosing me. Thank you for loving me back. Thank you for being my Ritija.
+          </p>
+
+          <div class="pt-4 text-right">
+            <span class="font-handwriting text-3xl sm:text-4xl text-blush-500 font-bold block">Forever and always your Prinsu,</span>
+            <span class="text-xs text-slate-400 font-semibold uppercase tracking-wider">With infinite kisses & hugs 🩵</span>
+          </div>
+        </div>
+
+        <!-- Read More Button -->
+        <div class="text-center pt-2">
+          <button id="toggle-letter-btn" onclick="toggleLetter()" class="px-6 py-2.5 rounded-full bg-blush-100 hover:bg-blush-200 text-blush-600 font-semibold text-xs sm:text-sm transition-all duration-300 hover:scale-105 active:scale-95 shadow-sm">
+            👇 Click to read every single word in my heart
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- 4. DIGITAL COMFORT & HUG CONSOLE                         -->
+    <!-- ======================================================== -->
+    <section class="glass-card rounded-3xl p-6 sm:p-10 border border-pink-200/90 shadow-xl space-y-8">
+      
+      <div class="text-center space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-blush-500">Virtual Affection Generator</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-800">
+          Rino's Interactive Hug & Kiss Machine 🫂
+        </h2>
+        <p class="text-sm text-slate-500 max-w-md mx-auto">
+          Need warmth right this second? Press the buttons to receive direct virtual affection from Prinsu!
+        </p>
+      </div>
+
+      <div class="max-w-2xl mx-auto space-y-6">
+        
+        <!-- Big Hug Button & Progress Bar -->
+        <div class="text-center space-y-4 bg-white/70 p-6 rounded-2xl border border-pink-100 shadow-sm">
+          
+          <div class="flex items-center justify-between text-xs sm:text-sm font-bold text-slate-600 px-2">
+            <span>Hug Level: <span id="hug-tier" class="text-blush-600">Soft Squeeze</span></span>
+            <span>Total Hugs: <span id="hug-count" class="text-blush-600 text-lg">0</span></span>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="w-full bg-pink-100 rounded-full h-3 overflow-hidden p-0.5">
+            <div id="hug-progress" class="bg-gradient-to-r from-pink-400 via-blush-500 to-lily-500 h-full rounded-full transition-all duration-300" style="width: 0%"></div>
+          </div>
+
+          <!-- Action Hug Button -->
+          <button onclick="giveHug()" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-blush-500 to-pink-600 text-white font-bold text-base shadow-lg shadow-blush-400/40 hover:shadow-blush-500/60 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 mx-auto">
+            <span class="text-2xl animate-bounce">🫂</span>
+            <span>Send A Warm Hug To Ritija (Tap Me!)</span>
+          </button>
+
+          <p id="hug-status" class="text-xs font-medium text-slate-400 italic">
+            Tap the button repeatedly to charge up your virtual embrace!
+          </p>
+        </div>
+
+        <!-- Quick Affection Touch Buttons -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          
+          <button onclick="giveAffection('forehead')" class="glass-card p-3.5 rounded-2xl text-center hover:bg-blush-50 transition-all hover:scale-105 active:scale-95 border border-pink-100 group">
+            <span class="text-2xl block mb-1 group-hover:scale-125 transition-transform">💋</span>
+            <span class="text-xs font-bold text-slate-700 block">Forehead Kiss</span>
+            <span class="text-[10px] text-slate-400">To melt stress</span>
+          </button>
+
+          <button onclick="giveAffection('cheek')" class="glass-card p-3.5 rounded-2xl text-center hover:bg-blush-50 transition-all hover:scale-105 active:scale-95 border border-pink-100 group">
+            <span class="text-2xl block mb-1 group-hover:scale-125 transition-transform">🤏</span>
+            <span class="text-xs font-bold text-slate-700 block">Cheek Pinch</span>
+            <span class="text-[10px] text-slate-400">Because you're cute</span>
+          </button>
+
+          <button onclick="giveAffection('pat')" class="glass-card p-3.5 rounded-2xl text-center hover:bg-blush-50 transition-all hover:scale-105 active:scale-95 border border-pink-100 group">
+            <span class="text-2xl block mb-1 group-hover:scale-125 transition-transform">🫳</span>
+            <span class="text-xs font-bold text-slate-700 block">Head Pat</span>
+            <span class="text-[10px] text-slate-400">Proud of you</span>
+          </button>
+
+          <button onclick="giveAffection('blanket')" class="glass-card p-3.5 rounded-2xl text-center hover:bg-blush-50 transition-all hover:scale-105 active:scale-95 border border-pink-100 group">
+            <span class="text-2xl block mb-1 group-hover:scale-125 transition-transform">🛋️</span>
+            <span class="text-xs font-bold text-slate-700 block">Tuck In Blanket</span>
+            <span class="text-[10px] text-slate-400">Cozy & protected</span>
+          </button>
+
+        </div>
+
+        <!-- Dynamic Output Message Box -->
+        <div id="affection-output" class="hidden text-center p-4 rounded-2xl bg-blush-50/90 border border-blush-200 text-blush-700 text-sm font-semibold animate-pulse-soft">
+          <!-- Populated by JS -->
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- 5. BLUE SPIDER LILY SANCTUARY (AOZORA HIGANBANA)          -->
+    <!-- ======================================================== -->
+    <section class="glass-card-blue rounded-3xl p-6 sm:p-12 relative overflow-hidden border border-lily-200 shadow-2xl space-y-8">
+      
+      <div class="text-center space-y-3 relative z-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-lily-600">The Rare & Mystical Flower</span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-800">
+          The Blue Spider Lily Garden 🪷
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 max-w-xl mx-auto">
+          Just like the legendary Blue Spider Lily, Ritija is a once-in-a-lifetime wonder. Click below to summon glowing sapphire petals and uncover hidden romantic whispers.
+        </p>
+      </div>
+
+      <!-- Glowing Bloom Display & Whispers -->
+      <div class="max-w-xl mx-auto text-center space-y-6 relative z-10">
+        
+        <!-- Interactive Lily Vector Emblem -->
+        <div onclick="bloomLily()" class="w-32 h-32 mx-auto rounded-full bg-gradient-to-tr from-lily-400 via-lily-200 to-indigo-100 p-1 glow-blue cursor-pointer hover:scale-110 active:scale-95 transition-all duration-300 shadow-xl flex items-center justify-center group relative">
+          <svg class="w-20 h-20 text-lily-600 group-hover:rotate-45 transition-transform duration-700" viewBox="0 0 100 100" fill="currentColor">
+            <!-- Stylized Spider Lily geometry -->
+            <path d="M50 50 C45 20, 20 15, 10 25 C25 35, 40 45, 50 50 Z" opacity="0.85"/>
+            <path d="M50 50 C55 20, 80 15, 90 25 C75 35, 60 45, 50 50 Z" opacity="0.85"/>
+            <path d="M50 50 C20 45, 15 70, 25 85 C35 70, 45 55, 50 50 Z" opacity="0.85"/>
+            <path d="M50 50 C80 45, 85 70, 75 85 C65 70, 55 55, 50 50 Z" opacity="0.85"/>
+            <circle cx="50" cy="50" r="10" fill="#39a4f8"/>
+            <!-- Stamen threads -->
+            <path d="M50 50 Q30 10 15 5" stroke="#0368c5" stroke-width="2" fill="none"/>
+            <path d="M50 50 Q70 10 85 5" stroke="#0368c5" stroke-width="2" fill="none"/>
+            <path d="M50 50 Q10 50 2 45" stroke="#0368c5" stroke-width="2" fill="none"/>
+            <path d="M50 50 Q90 50 98 45" stroke="#0368c5" stroke-width="2" fill="none"/>
+          </svg>
+          <span class="absolute -bottom-2 px-2.5 py-0.5 rounded-full bg-lily-600 text-white text-[10px] font-bold tracking-wider uppercase">Tap To Bloom</span>
+        </div>
+
+        <p class="text-xs text-slate-500 font-medium">
+          (Tap the lily above to trigger a blossom burst & secret message)
+        </p>
+
+        <!-- Dynamic Secret Whisper Card -->
+        <div id="lily-whisper-card" class="glass-card p-6 rounded-2xl border border-lily-200/90 text-slate-700 space-y-2 shadow-sm">
+          <span class="text-xs font-bold text-lily-600 uppercase tracking-widest block">Whisper From Prinsu:</span>
+          <p id="lily-whisper-text" class="font-serif italic text-base sm:text-lg text-slate-800">
+            "They say the Blue Spider Lily only blooms where miracles happen. You are the miracle that bloomed in my life."
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- 6. RITIJA'S MOOD EMERGENCY KIT                           -->
+    <!-- ======================================================== -->
+    <section class="glass-card rounded-3xl p-6 sm:p-10 border border-pink-200/90 shadow-xl space-y-8">
+      
+      <div class="text-center space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-blush-500">Always Here For You</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-800">
+          The Ritija Mood Emergency Kit 🩹
+        </h2>
+        <p class="text-sm text-slate-500 max-w-md mx-auto">
+          Whenever you need comfort, choose what your sweet heart is feeling right now:
+        </p>
+      </div>
+
+      <!-- Mood Selection Pills -->
+      <div class="flex flex-wrap justify-center gap-2 max-w-2xl mx-auto">
+        <button onclick="showMoodKit('tired')" class="mood-btn px-4 py-2 rounded-full border border-pink-200 bg-white/80 hover:bg-blush-100 text-slate-700 text-xs sm:text-sm font-semibold transition-all">
+          😴 Feeling Tired / Drained
+        </button>
+        <button onclick="showMoodKit('sad')" class="mood-btn px-4 py-2 rounded-full border border-pink-200 bg-white/80 hover:bg-blush-100 text-slate-700 text-xs sm:text-sm font-semibold transition-all">
+          🥺 Feeling Sad or Down
+        </button>
+        <button onclick="showMoodKit('overthinking')" class="mood-btn px-4 py-2 rounded-full border border-pink-200 bg-white/80 hover:bg-blush-100 text-slate-700 text-xs sm:text-sm font-semibold transition-all">
+          🌀 Overthinking Too Much
+        </button>
+        <button onclick="showMoodKit('missing')" class="mood-btn px-4 py-2 rounded-full border border-pink-200 bg-white/80 hover:bg-blush-100 text-slate-700 text-xs sm:text-sm font-semibold transition-all">
+          🫂 Missing Prinsu
+        </button>
+        <button onclick="showMoodKit('happy')" class="mood-btn px-4 py-2 rounded-full border border-pink-200 bg-white/80 hover:bg-blush-100 text-slate-700 text-xs sm:text-sm font-semibold transition-all">
+          🥰 Feeling Silly & Cute
+        </button>
+      </div>
+
+      <!-- Mood Kit Content Panel -->
+      <div id="mood-content-card" class="max-w-2xl mx-auto bg-gradient-to-br from-pink-50/80 to-white/90 p-6 sm:p-8 rounded-2xl border border-pink-200/80 shadow-md space-y-4">
+        <div class="flex items-center gap-3">
+          <span id="mood-emoji" class="text-3xl">☕</span>
+          <div>
+            <h4 id="mood-title" class="font-serif font-bold text-lg text-slate-800">Rest Your Sweet Head, My Love</h4>
+            <p id="mood-sub" class="text-xs text-blush-500 font-semibold">Prinsu's personal prescription for Rino</p>
+          </div>
+        </div>
+        <p id="mood-text" class="text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
+          You carried the weight of the day so gracefully, baby. Now it's time to set it all down. Unclench your jaw, relax your shoulders, and close your pretty eyes. You did amazing today, and tomorrow is another fresh canvas. I'm holding you tight in spirit.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- 7. SACRED BOYFRIEND OATHS & PROMISES                     -->
+    <!-- ======================================================== -->
+    <section class="space-y-8">
+      
+      <div class="text-center space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-blush-500">Unbreakable & Eternal</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-800">
+          Prinsu's Sacred Oaths To Ritija 📜
+        </h2>
+        <p class="text-sm text-slate-500 max-w-md mx-auto">
+          Ten unbreakable promises carved into stone, guaranteed for a lifetime
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        
+        <!-- Oath 1 -->
+        <div class="glass-card p-5 rounded-2xl border border-pink-100 hover:border-pink-300 transition-all hover:-translate-y-1">
+          <span class="text-2xl block mb-2">👂</span>
+          <h4 class="font-bold text-slate-800 text-sm">Always Listen With My Full Heart</h4>
+          <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+            Whether it's deep late-night thoughts or 20-minute rants about your day, I will always be your most eager audience.
+          </p>
+        </div>
+
+        <!-- Oath 2 -->
+        <div class="glass-card p-5 rounded-2xl border border-pink-100 hover:border-pink-300 transition-all hover:-translate-y-1">
+          <span class="text-2xl block mb-2">🛡️</span>
+          <h4 class="font-bold text-slate-800 text-sm">Be Your Safe Fortress</h4>
+          <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+            You will never have to fake a brave face around me. You can cry, complain, or be messy; I will love you through it all.
+          </p>
+        </div>
+
+        <!-- Oath 3 -->
+        <div class="glass-card p-5 rounded-2xl border border-pink-100 hover:border-pink-300 transition-all hover:-translate-y-1">
+          <span class="text-2xl block mb-2">🍟</span>
+          <h4 class="font-bold text-slate-800 text-sm">Feed Your Cravings & Spoil You</h4>
+          <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+            Your favorite snacks, surprise treats, and unconditional pampering—because seeing your happy munch face is my delight.
+          </p>
+        </div>
+
+        <!-- Oath 4 -->
+        <div class="glass-card p-5 rounded-2xl border border-pink-100 hover:border-pink-300 transition-all hover:-translate-y-1">
+          <span class="text-2xl block mb-2">🌸</span>
+          <h4 class="font-bold text-slate-800 text-sm">Celebrate Your May 24th Birthday Royal Style</h4>
+          <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+            Every May 24th will be treated like a global holiday honoring the birth of my queen.
+          </p>
+        </div>
+
+        <!-- Oath 5 -->
+        <div class="glass-card p-5 rounded-2xl border border-pink-100 hover:border-pink-300 transition-all hover:-translate-y-1">
+          <span class="text-2xl block mb-2">💎</span>
+          <h4 class="font-bold text-slate-800 text-sm">Remind You How Dazzling You Are</h4>
+          <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+            Whenever your confidence wavers, I will relentlessly remind you of your unmatched brilliance and heart.
+          </p>
+        </div>
+
+        <!-- Oath 6 -->
+        <div class="glass-card p-5 rounded-2xl border border-pink-100 hover:border-pink-300 transition-all hover:-translate-y-1">
+          <span class="text-2xl block mb-2">♾️</span>
+          <h4 class="font-bold text-slate-800 text-sm">Never Take You For Granted</h4>
+          <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+            Even when we are old and wrinkled, I will still look at you with the exact same sparkly heart-eyes as October 7th.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- 8. PLAYFUL CUTE LOVE QUIZ MINI-GAME                      -->
+    <!-- ======================================================== -->
+    <section class="glass-card rounded-3xl p-6 sm:p-10 border border-pink-200/90 shadow-xl space-y-6">
+      
+      <div class="text-center space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-blush-500">Playful Mini-Game</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-800">
+          The Ritija Love Inquisition 🔍
+        </h2>
+        <p class="text-sm text-slate-500 max-w-sm mx-auto">
+          Test your knowledge on the deepest universe truths!
+        </p>
+      </div>
+
+      <div class="max-w-xl mx-auto bg-white/80 p-6 sm:p-8 rounded-2xl border border-pink-100 shadow-sm space-y-6 text-center">
+        
+        <p id="quiz-question" class="font-serif font-bold text-lg sm:text-xl text-slate-800">
+          Question: How much does Prinsu love Ritija (Rino)?
+        </p>
+
+        <div id="quiz-options" class="grid grid-cols-1 gap-3">
+          <button onclick="handleQuizAnswer(1)" class="px-5 py-3 rounded-xl border border-pink-200 hover:bg-blush-50 text-slate-700 text-sm font-semibold transition-all hover:scale-102">
+            A) To the moon and back 🌕
+          </button>
+          <button onclick="handleQuizAnswer(2)" class="px-5 py-3 rounded-xl border border-pink-200 hover:bg-blush-50 text-slate-700 text-sm font-semibold transition-all hover:scale-102">
+            B) More than words can ever describe 📝
+          </button>
+          <button onclick="handleQuizAnswer(3)" class="px-5 py-3 rounded-xl border-2 border-blush-400 bg-pink-50/70 hover:bg-pink-100 text-blush-700 text-sm font-bold transition-all hover:scale-102">
+            C) Way past infinity, through all parallel universes combined 🌌
+          </button>
+        </div>
+
+        <div id="quiz-result" class="hidden p-4 rounded-xl bg-pink-50 text-blush-600 font-bold text-sm">
+          <!-- Populated by JS -->
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FOOTER WITH SWEET SIGN-OFF -->
+    <footer class="text-center space-y-4 pt-10 pb-16 text-slate-500 border-t border-pink-200/60">
+      
+      <div class="inline-flex items-center gap-3 text-lg font-serif italic text-slate-800">
+        <span>Prinsu</span>
+        <span class="text-blush-500 animate-pulse text-xl">🩵</span>
+        <span>Ritija Biswas (Rino)</span>
+      </div>
+
+      <p class="text-xs sm:text-sm text-slate-500 font-medium">
+        Hand-crafted with unconditional love, code, and countless butterflies by Prinsu for Ritija (Rino)
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-3 text-xs text-blush-500 font-bold">
+        <span>May 8 (Discord Spark)</span>
+        <span>•</span>
+        <span>May 24 (Her Birthday)</span>
+        <span>•</span>
+        <span>October 7, 2025 (Official Anniversary)</span>
+        <span>•</span>
+        <span>1 Year+ Celebrated</span>
+        <span>•</span>
+        <span>Forever</span>
+      </div>
+    </footer>
+
+  </main>
+
+
+  <!-- ======================================================== -->
+  <!-- JAVASCRIPT LOGIC: SOUNDS, TIMERS, PARTICLES & ANIMATIONS  -->
+  <!-- ======================================================== -->
+  <script>
+    // --- 1. WEB AUDIO API SYNTHESIZER (NO EXTERNAL AUDIO FILES) ---
+    let audioCtx = null;
+    let isMusicPlaying = false;
+    let musicInterval = null;
+
+    function getAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    // Play a gentle musical chime
+    function playChime(freq, type = 'sine', duration = 0.8, gainVal = 0.15) {
+      try {
+        const ctx = getAudioContext();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, ctx.currentTime);
+
+        gain.gain.setValueAtTime(gainVal, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + duration);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start();
+        osc.stop(ctx.currentTime + duration);
+      } catch (e) {
+        console.warn("Audio Context init pending user interaction:", e);
+      }
+    }
+
+    // Harp arpeggio sound effect
+    function playHarpChord() {
+      const notes = [523.25, 659.25, 783.99, 1046.50]; // C5, E5, G5, C6
+      notes.forEach((freq, idx) => {
+        setTimeout(() => {
+          playChime(freq, 'triangle', 1.2, 0.1);
+        }, idx * 90);
+      });
+    }
+
+    // Sweet pop sound effect
+    function playCutePop() {
+      playChime(880, 'sine', 0.2, 0.15);
+      setTimeout(() => playChime(1320, 'sine', 0.25, 0.12), 60);
+    }
+
+    // Ambient Lullaby Music Box Loop
+    function toggleMusicBox() {
+      const btn = document.getElementById('music-toggle-btn');
+      const label = document.getElementById('music-label');
+      const pulse = document.getElementById('music-pulse');
+      const icon = document.getElementById('music-icon');
+
+      if (!isMusicPlaying) {
+        getAudioContext();
+        isMusicPlaying = true;
+        label.innerText = "Pause Music Box";
+        pulse.classList.remove('hidden');
+        icon.classList.add('animate-spin');
+
+        // Pentatonic sweet lullaby scale
+        const melody = [523.25, 587.33, 659.25, 783.99, 880.00, 1046.50, 880.00, 783.99];
+        let step = 0;
+
+        musicInterval = setInterval(() => {
+          if (isMusicPlaying) {
+            playChime(melody[step % melody.length], 'sine', 1.5, 0.08);
+            step++;
+          }
+        }, 550);
+      } else {
+        isMusicPlaying = false;
+        clearInterval(musicInterval);
+        label.innerText = "Play Music Box";
+        pulse.classList.add('hidden');
+        icon.classList.remove('animate-spin');
+      }
+    }
+
+
+    // --- 2. PRECISE LIVE LOVE TIMER (START DATE: OCT 7, 2025 AT 12:00:00 PM) ---
+    function updateLoveTimer() {
+      // Start timestamp: October 7, 2025 at 12:00:00 PM
+      // Note: JavaScript Date month is 0-indexed (9 = October)
+      const startDate = new Date(2025, 9, 7, 12, 0, 0);
+      const now = new Date();
+
+      if (now < startDate) {
+        document.getElementById('timer-years').innerText = "0";
+        document.getElementById('timer-days').innerText = "00";
+        document.getElementById('timer-hours').innerText = "00";
+        document.getElementById('timer-minutes').innerText = "00";
+        document.getElementById('timer-seconds').innerText = "00";
+        return;
+      }
+
+      // Calculate completed years
+      let years = now.getFullYear() - startDate.getFullYear();
+      let lastAnniversary = new Date(startDate.getTime());
+      lastAnniversary.setFullYear(startDate.getFullYear() + years);
+
+      if (now < lastAnniversary) {
+        years--;
+        lastAnniversary = new Date(startDate.getTime());
+        lastAnniversary.setFullYear(startDate.getFullYear() + years);
+      }
+
+      // Time difference since the most recent annual anniversary
+      const diffSinceLastYear = now.getTime() - lastAnniversary.getTime();
+
+      const days = Math.floor(diffSinceLastYear / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diffSinceLastYear / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diffSinceLastYear / (1000 * 60)) % 60);
+      const seconds = Math.floor((diffSinceLastYear / 1000) % 60);
+
+      document.getElementById('timer-years').innerText = years;
+      document.getElementById('timer-days').innerText = String(days).padStart(2, '0');
+      document.getElementById('timer-hours').innerText = String(hours).padStart(2, '0');
+      document.getElementById('timer-minutes').innerText = String(minutes).padStart(2, '0');
+      document.getElementById('timer-seconds').innerText = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateLoveTimer, 1000);
+    updateLoveTimer();
+
+
+    // --- 3. AMBIENT PARTICLES (BLUE SPIDER LILY PETALS & ROSE BLUSH PARTICLES) ---
+    const canvas = document.getElementById('ambient-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = -20;
+        this.size = Math.random() * 8 + 6;
+        this.speedY = Math.random() * 1.2 + 0.6;
+        this.speedX = (Math.random() - 0.5) * 0.8;
+        this.rotation = Math.random() * 360;
+        this.rotSpeed = (Math.random() - 0.5) * 1.5;
+        this.opacity = Math.random() * 0.5 + 0.3;
+        // Alternates between soft pink rose petals and glowing blue spider lily petals
+        this.isBlue = Math.random() > 0.45;
+      }
+      update() {
+        this.y += this.speedY;
+        this.x += this.speedX + Math.sin(this.y * 0.01) * 0.5;
+        this.rotation += this.rotSpeed;
+        if (this.y > canvas.height + 20) {
+          this.reset();
+        }
+      }
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate((this.rotation * Math.PI) / 180);
+        ctx.globalAlpha = this.opacity;
+
+        if (this.isBlue) {
+          // Sapphire Spider Lily Petal
+          ctx.fillStyle = '#7cc4fd';
+          ctx.shadowBlur = 10;
+          ctx.shadowColor = '#0f86e8';
+        } else {
+          // Soft Pink Petal
+          ctx.fillStyle = '#fecdd7';
+          ctx.shadowBlur = 6;
+          ctx.shadowColor = '#fb6f8c';
+        }
+
+        // Petal shape
+        ctx.beginPath();
+        ctx.ellipse(0, 0, this.size, this.size / 2.2, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    for (let i = 0; i < 40; i++) {
+      const p = new Particle();
+      p.y = Math.random() * canvas.height;
+      particles.push(p);
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+
+    // --- 4. CURSOR TRAIL SPARKLES ---
+    let lastTrailTime = 0;
+    window.addEventListener('mousemove', (e) => {
+      const now = performance.now();
+      if (now - lastTrailTime > 65) {
+        createHeartTrail(e.clientX, e.clientY);
+        lastTrailTime = now;
+      }
+    });
+
+    window.addEventListener('touchmove', (e) => {
+      if (e.touches && e.touches[0]) {
+        createHeartTrail(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+
+    function createHeartTrail(x, y) {
+      const emojis = ['🩵', '✨', '💖', '🌸', '💫'];
+      const el = document.createElement('span');
+      el.className = 'trail-heart';
+      el.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      el.style.left = `${x}px`;
+      el.style.top = `${y}px`;
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 1000);
+    }
+
+
+    // --- 5. INTERACTIVE LOVE SHOWER CONFETTI ---
+    function triggerLoveShower() {
+      playHarpChord();
+      confetti({
+        particleCount: 75,
+        spread: 90,
+        origin: { y: 0.6 },
+        colors: ['#fb6f8c', '#39a4f8', '#ffccd5', '#a5d8ff']
+      });
+    }
+
+
+    // --- 6. ACCORDION LETTER TOGGLE ---
+    function toggleLetter() {
+      const letter = document.getElementById('expanded-letter');
+      const btn = document.getElementById('toggle-letter-btn');
+      playCutePop();
+
+      if (letter.classList.contains('hidden')) {
+        letter.classList.remove('hidden');
+        btn.innerText = "👆 Fold Up Letter";
+      } else {
+        letter.classList.add('hidden');
+        btn.innerText = "👇 Click to read every single word in my heart";
+      }
+    }
+
+    function scrollToSection(id) {
+      playCutePop();
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+
+    // --- 7. HUG METER LOGIC ---
+    let hugCount = 0;
+    const hugTiers = [
+      { min: 0, label: "Soft Squeeze 🌸" },
+      { min: 5, label: "Warm Blanket Wrap 🧸" },
+      { min: 12, label: "Tight Breathless Snuggle 💖" },
+      { min: 25, label: "Infinite Cosmic Cuddle 🌌" },
+      { min: 50, label: "Eternally Glued To Prinsu 🩵" }
+    ];
+
+    function giveHug() {
+      hugCount++;
+      playCutePop();
+
+      document.getElementById('hug-count').innerText = hugCount;
+      const progressPercent = Math.min((hugCount / 40) * 100, 100);
+      document.getElementById('hug-progress').style.width = `${progressPercent}%`;
+
+      // Update tier label
+      let currentTier = hugTiers[0].label;
+      for (let t of hugTiers) {
+        if (hugCount >= t.min) currentTier = t.label;
+      }
+      document.getElementById('hug-tier').innerText = currentTier;
+
+      // Status text
+      const messages = [
+        "Ritija's heart is feeling warmer! 🩵",
+        "Arms wrapped tight around you, baby! 🫂",
+        "Prinsu's cuddles deployed at maximum strength! ✨",
+        "You're not allowed to let go now! 🥰"
+      ];
+      document.getElementById('hug-status').innerText = messages[hugCount % messages.length];
+
+      // Little burst of confetti every 5 hugs
+      if (hugCount % 5 === 0) {
+        confetti({
+          particleCount: 25,
+          spread: 60,
+          origin: { y: 0.7 },
+          colors: ['#fb6f8c', '#39a4f8']
+        });
+      }
+    }
+
+
+    // --- 8. QUICK AFFECTION BUTTONS ---
+    function giveAffection(type) {
+      playCutePop();
+      const output = document.getElementById('affection-output');
+      output.classList.remove('hidden');
+
+      const responses = {
+        forehead: "💋 *mwah* Soft forehead kiss placed right on your temple. Every worry in your head is now officially banned!",
+        cheek: "🤏 *squish* Prinsu gently pinched your cute little cheeks! Can't help it when you're this adorable.",
+        pat: "🫳 *pat pat* Soft, gentle head pats for the most hardworking and gorgeous girl in existence.",
+        blanket: "🛋️ Prinsu wrapped you up like a warm little burrito, gave you a plushie, and tucked you in nice and safe."
+      };
+
+      output.innerText = responses[type] || "Loving you infinitely!";
+    }
+
+
+    // --- 9. BLUE SPIDER LILY BLOOM & WHISPERS ---
+    const whispers = [
+      "They say the Blue Spider Lily only blooms where miracles happen. You are the miracle that bloomed in my life.",
+      "Just like the rarest flower in existence, my heart blooms exclusively for you, Rino.",
+      "Out of 8 billion people on Earth, the universe led me straight to your soul.",
+      "Your laugh is my favorite song, and your happiness is my life's mission.",
+      "Even if I searched for ten lifetimes, I could never find someone as precious as you."
+    ];
+    let whisperIdx = 0;
+
+    function bloomLily() {
+      playHarpChord();
+      whisperIdx = (whisperIdx + 1) % whispers.length;
+      document.getElementById('lily-whisper-text').innerText = `"${whispers[whisperIdx]}"`;
+
+      // Visual blossom burst
+      confetti({
+        particleCount: 40,
+        spread: 80,
+        origin: { y: 0.65 },
+        colors: ['#0f86e8', '#39a4f8', '#b9e0fe', '#ffffff']
+      });
+    }
+
+
+    // --- 10. RITIJA'S MOOD EMERGENCY KIT ---
+    const moodKits = {
+      tired: {
+        emoji: "☕",
+        title: "Rest Your Sweet Head, My Love",
+        sub: "Prinsu's prescription for exhausted days",
+        text: "You carried the weight of the day so gracefully, baby. Now it's time to set it all down. Unclench your jaw, relax your shoulders, and close your pretty eyes. You did amazing today, and tomorrow is another fresh canvas. I'm holding you tight in spirit."
+      },
+      sad: {
+        emoji: "🩹",
+        title: "Your Sadness Is Safe In My Hands",
+        sub: "A warm shield around your heart",
+        text: "It is 100% okay to not be okay right now. You don't have to explain anything. Just know that I adore you on your brightest days and I adore you even more on your stormy days. I'm right here with you, always."
+      },
+      overthinking: {
+        emoji: "🌊",
+        title: "Breathe In, Breathe Out 🩵",
+        sub: "Quieting the noisy thoughts together",
+        text: "Hey, look at me. The thoughts swirling in your mind right now are exaggerating things. You are safe, you are deeply loved by me, and we will handle whatever comes together. Let's take three slow breaths together."
+      },
+      missing: {
+        emoji: "💌",
+        title: "Prinsu Misses You 10,000x More",
+        sub: "Connected heart-to-heart across any distance",
+        text: "Look down at your hand—imagine my fingers intertwined with yours. Close your eyes and feel my arms around you. Distance and screens cannot diminish a single ounce of how completely head-over-heels I am for you."
+      },
+      happy: {
+        emoji: "🎉",
+        title: "Your Smile Is My Daily Fuel!",
+        sub: "Celebrating your cutest moments",
+        text: "Seeing you happy makes the entire world 10 times brighter! Never stop giggling, never stop showing off that sweet smile, and keep being the bubbly sunshine that stole my heart."
+      }
+    };
+
+    function showMoodKit(key) {
+      playCutePop();
+      const kit = moodKits[key];
+      if (!kit) return;
+
+      document.getElementById('mood-emoji').innerText = kit.emoji;
+      document.getElementById('mood-title').innerText = kit.title;
+      document.getElementById('mood-sub').innerText = kit.sub;
+      document.getElementById('mood-text').innerText = kit.text;
+    }
+
+
+    // --- 11. PLAYFUL LOVE QUIZ ---
+    function handleQuizAnswer(choice) {
+      playCutePop();
+      const result = document.getElementById('quiz-result');
+      result.classList.remove('hidden');
+
+      if (choice === 3) {
+        result.innerText = "🎉 CORRECT! Beyond infinity, across every single universe, dimension, and timeline. Prinsu loves Ritija forever!";
+        triggerLoveShower();
+      } else {
+        result.innerText = "Awww, that's true... BUT the real answer is C! Prinsu's love is way bigger than that!";
+      }
+    }
+  </script>
+</body>
+</html>
