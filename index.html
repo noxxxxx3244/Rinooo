@@ -1,1 +1,399 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Ritija (Rino) 🩵 With All My Heart From Prinsu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            handwriting: ['"Caveat"', 'cursive'],
+          },
+          colors: {
+            blush: {
+              50: '#fff1f4',
+              100: '#ffe4e9',
+              200: '#fecdd7',
+              300: '#fea3b5',
+              400: '#fb6f8c',
+              500: '#f43f68',
+              600: '#e11d4d',
+            },
+            lily: {
+              50: '#f0f7ff',
+              100: '#e0f0fe',
+              200: '#b9e0fe',
+              300: '#7cc4fd',
+              400: '#39a4f8',
+              500: '#0f86e8',
+              600: '#0368c5',
+              700: '#03539f',
+              800: '#074682',
+              900: '#0c3b6d',
+            }
+          },
+          animation: {
+            'float-slow': 'float 6s ease-in-out infinite',
+            'float-reverse': 'floatRev 7s ease-in-out infinite',
+            'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
+            'glow-spin': 'glowSpin 12s linear infinite',
+            'sparkle': 'sparkle 2s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-12px) rotate(2deg)' },
+            },
+            floatRev: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(12px) rotate(-2deg)' },
+            },
+            pulseSoft: {
+              '0%, 100%': { opacity: '0.9', transform: 'scale(1)' },
+              '50%': { opacity: '1', transform: 'scale(1.03)' },
+            },
+            glowSpin: {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(360deg)' },
+            },
+            sparkle: {
+              '0%, 100%': { opacity: '0.4', transform: 'scale(0.8)' },
+              '50%': { opacity: '1', transform: 'scale(1.2)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Smooth custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #fdf8f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #fea3b5;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #fb6f8c;
+    }
+
+    /* Ambient background gradient */
+    body {
+      background: radial-gradient(circle at 10% 20%, #fff0f5 0%, #f4f8ff 45%, #fff5f7 85%, #f0f7ff 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+      cursor: default;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0 16px 38px -10px rgba(225, 29, 77, 0.08), 0 8px 20px -8px rgba(3, 104, 197, 0.08);
+    }
+
+    .glass-card-blue {
+      background: rgba(240, 248, 255, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(185, 224, 254, 0.6);
+      box-shadow: 0 16px 36px -8px rgba(3, 104, 197, 0.12);
+    }
+
+    .glow-rose {
+      filter: drop-shadow(0 0 12px rgba(251, 111, 140, 0.45));
+    }
+    .glow-blue {
+      filter: drop-shadow(0 0 14px rgba(57, 164, 248, 0.55));
+    }
+
+    /* Floating cursor hearts & sparkles */
+    .trail-heart {
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      animation: heartFade 1s forwards ease-out;
+      font-size: 14px;
+      user-select: none;
+    }
+
+    @keyframes heartFade {
+      0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2) translateY(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.4) translateY(-35px) rotate(20deg);
+      }
+    }
+
+    /* Canvas background full-stretch */
+    #ambient-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blush-200 selection:text-blush-600 relative">
+
+  <!-- BACKGROUND PARTICLE & BLUE SPIDER LILY PETAL CANVAS -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- FIXED FLOATING AUDIO & COMFORT CONTROL PANEL -->
+  <div class="fixed top-4 right-4 z-50 flex items-center gap-2">
+    <!-- Music Box Toggle Button -->
+    <button id="music-toggle-btn" onclick="toggleMusicBox()" class="glass-card px-4 py-2.5 rounded-full flex items-center gap-2 text-xs sm:text-sm font-semibold text-blush-600 hover:text-blush-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 border border-pink-200/60 group">
+      <span id="music-icon" class="text-base group-hover:rotate-12 transition-transform">🎵</span>
+      <span id="music-label">Play Music Box</span>
+      <span id="music-pulse" class="w-2 h-2 rounded-full bg-emerald-400 hidden animate-ping"></span>
+    </button>
+  </div>
+
+  <!-- MAIN SCROLLABLE CONTAINER -->
+  <main class="relative z-10 max-w-5xl mx-auto px-4 py-8 sm:py-12 md:py-16 space-y-16 sm:space-y-24">
+
+    <!-- HERO HEADER -->
+    <header class="text-center space-y-6 pt-4 sm:pt-8">
+      
+      <!-- Top Sweet Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-pink-200 text-xs sm:text-sm font-semibold text-blush-600 shadow-sm animate-float-slow">
+        <span class="text-lily-500">🪷</span>
+        <span>A Sanctuary Dedicated To My Queen Ritija (Rino)</span>
+        <span class="text-blush-400">✨</span>
+      </div>
+
+      <!-- Main Headline with Names -->
+      <div class="space-y-3">
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-bold text-slate-800 tracking-tight leading-tight">
+          To My Beloved <span class="bg-gradient-to-r from-blush-500 via-pink-400 to-lily-500 bg-clip-text text-transparent underline decoration-blush-300 decoration-wavy underline-offset-8">Ritija</span> 🩵
+        </h1>
+        <p class="font-handwriting text-2xl sm:text-3xl md:text-4xl text-blush-500 font-bold tracking-wide">
+          "Being your boyfriend isn't just my happiness... it's my whole universe."
+        </p>
+      </div>
+
+      <!-- Sweet Sub-dedication -->
+      <p class="max-w-2xl mx-auto text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
+        From the very first hello on Discord to celebrating over a whole year of hand-in-hand warmth, 
+        every single second by your side has been pure magic. Here is your eternal realm of kisses, blue spider lilies, and boyfriend devotion.
+      </p>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex flex-wrap justify-center gap-3 pt-2">
+        <button onclick="triggerLoveShower()" class="px-5 py-3 rounded-full bg-gradient-to-r from-blush-500 to-pink-500 text-white font-semibold text-sm shadow-lg shadow-blush-400/30 hover:shadow-blush-500/50 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2">
+          <span>💖 Tap For Infinite Love Shower</span>
+        </button>
+        <button onclick="scrollToSection('letter-section')" class="px-5 py-3 rounded-full glass-card text-slate-700 font-semibold text-sm hover:text-blush-600 shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 border border-pink-100">
+          <span>💌 Read My Letter To You</span>
+        </button>
+      </div>
+    </header>
+
+
+    <!-- ======================================================== -->
+    <!-- 1. LIVE LOVE COUNTER (1 YEAR, 10+ DAYS & TICKING LIVE)    -->
+    <!-- ======================================================== -->
+    <section class="glass-card rounded-3xl p-6 sm:p-10 text-center relative overflow-hidden border border-pink-200/80 shadow-2xl">
+      <!-- Decorative background blooms -->
+      <div class="absolute -top-12 -left-12 w-40 h-40 bg-blush-200/40 rounded-full blur-2xl pointer-events-none"></div>
+      <div class="absolute -bottom-12 -right-12 w-48 h-48 bg-lily-200/40 rounded-full blur-2xl pointer-events-none"></div>
+
+      <!-- Tag & Anniversary Callout -->
+      <div class="relative z-10 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blush-100/90 text-blush-600 font-semibold text-xs tracking-wider uppercase">
+          <span>⏳ The Eternal Journey</span>
+          <span>•</span>
+          <span>Officially Started Oct 7, 2025 at 12:00 PM</span>
+        </div>
+
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-slate-800">
+          Every Second With Ritija Has Been A Blessing ✨
+        </h2>
+
+        <p class="text-sm sm:text-base text-slate-600 max-w-xl mx-auto">
+          We crossed our <strong class="text-blush-500 font-bold">1-Year Anniversary</strong> together, and my love for you continues to multiply into infinity every single heartbeat:
+        </p>
+
+        <!-- 5-CARD LIVE TICKING COUNTER (Years, Days, Hours, Minutes, Seconds) -->
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 sm:gap-4 max-w-3xl mx-auto pt-4">
+          
+          <!-- Years -->
+          <div class="glass-card p-4 sm:p-5 rounded-2xl border-2 border-blush-300/80 bg-white/80 shadow-md hover:scale-105 transition-transform">
+            <span id="timer-years" class="block text-3xl sm:text-4xl md:text-5xl font-extrabold text-blush-500 font-serif">1</span>
+            <span class="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">Years Full of Love</span>
+          </div>
+
+          <!-- Days -->
+          <div class="glass-card p-4 sm:p-5 rounded-2xl border-2 border-blush-300/80 bg-white/80 shadow-md hover:scale-105 transition-transform">
+            <span id="timer-days" class="block text-3xl sm:text-4xl md:text-5xl font-extrabold text-blush-500 font-serif">10</span>
+            <span class="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">Days Beyond</span>
+          </div>
+
+          <!-- Hours -->
+          <div class="glass-card p-4 sm:p-5 rounded-2xl border-2 border-lily-300/80 bg-white/80 shadow-md hover:scale-105 transition-transform">
+            <span id="timer-hours" class="block text-3xl sm:text-4xl md:text-5xl font-extrabold text-lily-600 font-serif">00</span>
+            <span class="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">Hours Cherished</span>
+          </div>
+
+          <!-- Minutes -->
+          <div class="glass-card p-4 sm:p-5 rounded-2xl border-2 border-pink-300/80 bg-white/80 shadow-md hover:scale-105 transition-transform">
+            <span id="timer-minutes" class="block text-3xl sm:text-4xl md:text-5xl font-extrabold text-pink-500 font-serif">00</span>
+            <span class="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1 block">Sweet Minutes</span>
+          </div>
+
+          <!-- Seconds -->
+          <div class="col-span-2 sm:col-span-1 glass-card p-4 sm:p-5 rounded-2xl border-2 border-rose-400 bg-rose-50/70 shadow-md hover:scale-105 transition-transform relative overflow-hidden">
+            <span id="timer-seconds" class="block text-3xl sm:text-4xl md:text-5xl font-extrabold text-rose-500 font-serif animate-pulse-soft">00</span>
+            <span class="text-xs uppercase tracking-wider font-semibold text-rose-500 font-bold mt-1 block">Heartbeat Seconds</span>
+          </div>
+        </div>
+
+        <!-- Celebratory Milestone Footnote -->
+        <div class="pt-4 flex flex-wrap items-center justify-center gap-2 text-xs font-semibold text-slate-500">
+          <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-700">✓ 1st Full Year Complete! 🎉</span>
+          <span class="px-3 py-1 rounded-full bg-lily-100 text-lily-700">✓ Over 375+ Days Of Pure Smiles</span>
+          <span class="px-3 py-1 rounded-full bg-pink-100 text-pink-700">∞ Eternity To Go With Rino</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- 2. SACRED MILESTONES TIMELINE                             -->
+    <!-- ======================================================== -->
+    <section class="space-y-8">
+      <div class="text-center space-y-2">
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-800">
+          Our Most Treasured Constellations 💫
+        </h2>
+        <p class="text-sm sm:text-base text-slate-500 max-w-md mx-auto">
+          The three golden days that reshaped Prinsu's whole world forever
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Milestone 1: Discord First Conversation -->
+        <div class="glass-card p-6 sm:p-8 rounded-3xl border border-pink-100 hover:border-pink-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-100 to-indigo-200 text-indigo-600 flex items-center justify-center text-2xl shadow-inner group-hover:scale-110 transition-transform">
+              💬
+            </div>
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-indigo-500">The Spark That Started It All</span>
+              <h3 class="text-xl font-bold font-serif text-slate-800 mt-1">May 8 • 3:00 PM</h3>
+              <p class="text-xs font-semibold text-slate-400">Our First Words On Discord</p>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              It felt like an ordinary afternoon until 3:00 PM struck, and your first message popped up on Discord. Little did I know that simple chime was destiny quietly handing me the most precious soul I'd ever cherish.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-semibold text-indigo-600 flex items-center gap-1">
+            <span>✨ The universe whispered your name</span>
+          </div>
+        </div>
+
+        <!-- Milestone 2: Ritija's Birthday -->
+        <div class="glass-card p-6 sm:p-8 rounded-3xl border border-pink-100 hover:border-pink-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blush-100 to-pink-200 text-blush-600 flex items-center justify-center text-2xl shadow-inner group-hover:scale-110 transition-transform">
+              👑
+            </div>
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-blush-500">The Queen's Arrival</span>
+              <h3 class="text-xl font-bold font-serif text-slate-800 mt-1">May 24</h3>
+              <p class="text-xs font-semibold text-slate-400">Ritija's Birthday</p>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              The day heaven decided the world needed someone softer, funnier, and unimaginably beautiful. Every May 24 is my personal sacred festival—thanking the universe for breathing life into my sweet Rino.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-semibold text-blush-600 flex items-center gap-1">
+            <span>🎂 Forever celebrating my girl</span>
+          </div>
+        </div>
+
+        <!-- Milestone 3: Official Anniversary -->
+        <div class="glass-card-blue p-6 sm:p-8 rounded-3xl border border-lily-200 hover:border-lily-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-lily-100 to-blue-200 text-lily-600 flex items-center justify-center text-2xl shadow-inner group-hover:scale-110 transition-transform">
+              💍
+            </div>
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-lily-600">Officially Mine & Yours</span>
+              <h3 class="text-xl font-bold font-serif text-slate-800 mt-1">October 7, 2025 • 12:00 PM</h3>
+              <p class="text-xs font-semibold text-slate-400">1+ Year Anniversary & Beyond</p>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              High noon at 12:00 PM when two lives bound together forever. Passing our 1-year milestone was only Chapter 1 of our eternal fairytale. You made me the proudest boyfriend alive.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-lily-200 text-xs font-semibold text-lily-700 flex items-center gap-1">
+            <span>🩵 1 Year & 10+ Days Of Unconditional Love</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================================================== -->
+    <!-- 3. HEARTFELT LOVE LETTER ACCORDION (A LOT OF PARAGRAPHS)  -->
+    <!-- ======================================================== -->
+    <section id="letter-section" class="glass-card rounded-3xl p-6 sm:p-12 relative border border-pink-200 shadow-xl space-y-8">
+      
+      <div class="text-center space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-blush-500">Unfiltered Heart & Soul</span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-800">
+          Letters Written Just For You, Rino 📜
+        </h2>
+        <p class="text-slate-500 text-sm sm:text-base max-w-lg mx-auto">
+          Take a deep breath, sit comfortably, and let me tell you everything you mean to me...
+        </p>
+      </div>
+
+      <!-- Envelope / Wax Seal Visual Header -->
+      <div class="max-w-3xl mx-auto bg-gradient-to-b from-white/95 to-pink-50/70 p-6 sm:p-10 rounded-2xl border border-pink-100/90 shadow-inner space-y-6 text-slate-700 font-sans leading-relaxed text-sm sm:text-base">
+        
+        <div class="flex items-center justify-between pb-4 border-b border-pink-100">
+          <div>
+            <h4 class="font-serif font-bold text-lg text-slate-800">To My Dearest Ritija Biswas</h4>
+            <p class="text-xs text-slate-400">From Prinsu • Signed With Endless Love</p>
+          </div>
+          <span class="text-2xl">💌</span>
+        </div>
+
+        <p class="font-serif text-lg sm:text-xl italic text-slate-800">
+          "My sweet Rino, being your boyfriend means the absolute entire world to me. In fact, 'world' doesn't even feel big enough—you are my entire cosmos, my favorite quiet safe haven, and the brightest sun in every grey day."
+        </p>
+
+        <p>
+          When I think about you, I don't just feel love—I feel peace. Before you came into my life on that sweet May 8th afternoon, my days were just standard routines. But the second you began laughing with me, sharing your random thoughts, sending your cute little messages, and showing me the tender girl behind that sweet face, everything gained vibrant color. You made ordinary life feel cinematic.
+        </p>
+
+        <p>
+          You are the very first thought that brings a gentle s
